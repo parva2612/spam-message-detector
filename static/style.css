@@ -1,0 +1,131 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background: #2d2d44;
+  /* height: 100vh; */
+  overflow: none;
+  display: flex;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 80vw;
+}
+.title {
+  border: 2px solid aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  width: auto;
+}
+
+.pg-1,
+.pg-2 {
+  height: 100vh;
+}
+
+.pg-2-2 {
+  height: 90vh;
+}
+.first-form {
+  /* height: 75vh; */
+  max-width: 80vw;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 80vw; */
+  /* margin: 10px; */
+}
+
+#head {
+  color: #33e1ed;
+}
+
+.upload_file {
+  font-size: 20px;
+  background-color: #424256;
+  color: aliceblue;
+  /* border: 2px solid #33e1ed; */
+  border-radius: 20px;
+  border-width: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 40vw;
+  /* border-color: #33e1ed; */
+}
+.upload_file::file-selector-button {
+  margin-right: 20px;
+  font-size: 20px;
+  border: none;
+  /* background: #084cdf; */
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  /* transition: background 0.2s ease-in-out; */
+}
+textarea {
+  outline: none;
+  /* margin-top: 20px; */
+  margin-bottom: 10px;
+  width: 500px;
+  max-width: 80vw;
+  background-color: transparent;
+  resize: none;
+  overflow: auto;
+  color: aliceblue;
+  font-size: 1.5em;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #33e1ed;
+  height: 100px;
+  padding: 10px;
+}
+
+#btn {
+  /* margin-top: 10px; */
+  font-size: 1.5em;
+  padding: 10px;
+  /* margin-top: 10px; */
+  background-color: #424256;
+  color: aliceblue;
+  border: 2px solid #33e1ed;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 0.5 em;
+}
+#btn:hover {
+  background-color: #2d2d44;
+  cursor: pointer;
+}
+
+.results {
+  color: aliceblue;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  /* font-size: x-large; */
+  font-size: 1.5em;
+}
+
+.link {
+  /* position: absolute; */
+  /* margin-top: 90vh; */
+  text-decoration: none;
+  color: aliceblue;
+  margin-left: 10px;
+  font-size: 0.75em;
+  margin-bottom: 5px;
+  /* margin: 20px; */
+}
+
+.header {
+  margin: 5px;
+  padding: 5px;
+}

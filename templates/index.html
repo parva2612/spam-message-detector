@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://i.ibb.co/2kmvGQt/spam-fav.png" type="image/x-icon">
+    <title>Spam Detection Model</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="page-1" class="container">
+      <div class="pg-1">
+      <h1 class="title"><u>SPAM</u> MESSAGE DETECTOR</h1>
+      <p>Hello there...</p>
+      <p> 
+        Welcome to my spam detection app. 
+        With this app, you can quickly and easily detect whether a text message is spam or not.
+      </p>
+
+      <hr>
+      <form class="first-form" action="{{url_for('predict1')}}" method="post">
+        <h2 class="header">Type your message here</h2>
+        <a class="link" href="#page-2"><u>click here to test multiple messages</u></a> 
+
+        <textarea
+          id="input"
+          name="message"
+          placeholder="Your Message..."
+          cols=""
+          rows=""
+        ></textarea>
+
+        <button id="btn" type="submit">Predict</button>
+        <div class="results">
+          <!-- <h2>Result</h2> -->
+          {% if prediction==1 %}
+          <p>
+            <span class="danger">(￢_￢) <br>This message smells fishy! <br> It's <b> definitely a SPAM!</b> </span>
+          </p>
+          {% elif prediction==0 %}
+          <p>
+            <span class="safe">(. ❛ ᴗ ❛.) <br> Legit message! <br> <b>No SPAM</b> here. <br> Just unicorns in a rainbow field!</span>
+          </p>
+          {% endif %}
+        </div>
+        <br><br>
+      </div>
+      <hr>
+      <div id="page-2" class="pg-2">
+      <div class="pg-2-2">
+
+        <h1 class="title"><u>SPAM</u> MESSAGE DETECTOR</h1>
+      <p>Hello there...</p>
+      <p> 
+        Welcome to my spam detection app. 
+        With this app, you can quickly and easily detect whether a text message is spam or not.
+      </p>
+      <hr>
+      </form>
+       
+      <form
+        action="{{ url_for('predict') }}"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+      
+        <h2 class="header">Upload a CSV file containing messages</h2>
+        <p style="margin-left: 10px; margin-right: 10px;"><i> [Upload the file with one column and it's header named "v2". In that column write messages row-wise.]</i></p>
+        <a class="link" href="#page-1"><u>click here to test single message</u></a> 
+        <input
+          class="upload_file"
+          type="file"
+          name="file"
+          class="form-control-file"
+        /><br />
+        <!-- <input id="input" type="textarea" placeholder="Your Message Here" /> -->
+        <button id="btn" type="submit">Predict</button>      </form>
+      </div>
+      <hr>
+      <div class="footer">Copyright &copy; ParvA <br> No rights reserved. 🐼</div>     
+    </div>
+    </div>
+  </body>
+  <!-- <script src="main.js"></script> -->
+</html>
